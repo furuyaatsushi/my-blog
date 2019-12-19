@@ -6,4 +6,14 @@ Twetterとの連携や、画像の複数投稿、プレビューなどのやっ�
 
 # DB設計
 
+## usersテーブル
 
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|profile|text||
+|icon|string||
+
+## Association
