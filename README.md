@@ -1,24 +1,9 @@
-# README
+# コンセプト
+構造としてはいたって単純なブログアプリ。
+Twetterとの連携や、画像の複数投稿、プレビューなどのやったこのない機能にチャレンジする。
+また、最終課題の時の経験を活かした機能を実装する。(アウトプット)
+デプロイ経験がAWSでのみのため、herokuを用いたデプロイに挑戦する。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DB設計
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
