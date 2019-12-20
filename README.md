@@ -20,6 +20,10 @@
 
 ## Association
 
+- has_many :articles
+- has_many :articles, through: :comments
+- has_many :articles,through: :favorites
+
 
 ## articleテーブル
 投稿された記事は複数の画像を投稿できる。
@@ -33,6 +37,11 @@
 
 ## Association
 
+- has_many :users, through: :comments
+- has_many :favorites
+- has_many :tags, through: :article_tags
+- has_many :users, through: :favorite
+- belongs_to :user
 
 ## commentsテーブル
 投稿されたブログにコメントを投稿できる。
@@ -42,10 +51,12 @@
 |------|----|-------|
 |content|text|null: false|
 |user_id|integer|null: false|
-|post_id|integer|null: false|
+|article_id|integer|null: false|
 
 ## Association
 
+- belongs_to :user
+- belongs_to :article
 
 ## tagsテーブル
 記事にはタグをつけることができる。
@@ -57,24 +68,31 @@
 
 ## Association
 
+- belongs_to :article
+- belongs_to :tag
 
 ## favoritesテーブル
 記事にはお気に入り(いいね)をつけることができ、その数を表示したりいいね欄から記事に飛べる。
 
 |Column|Type|Options|
 |------|----|-------|
-|post_id|integer|null: false|
+|article_id|integer|null: false|
 |user_id|integer|null: false|
 
 ## Association
 
+- belongs_to :user
+- belongs_to :article
 
-## post_tagsテーブル
+## article_tagsテーブル
 一つの記事は複数のタグを持ち、一つのタグは複数の記事を持つ。
 
 |Column|Type|Options|
 |------|----|-------|
-|post_id|integer|null: false|
+|article_id|integer|null: false|
 |tag_id|integer|null: false|
 
 ## Association
+
+- belongs_to :article
+- belongs_to :tag
