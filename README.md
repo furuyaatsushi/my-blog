@@ -41,7 +41,20 @@
 - has_many :favorites
 - has_many :tags, through: :article_tags
 - has_many :users, through: :favorite
+- has_many :images
 - belongs_to :user
+
+## imagesテーブル
+一つの記事に複数の画像投稿が可能
+
+|Column|Type|Options|
+|------|----|-------|
+|image|string|null: false|
+|article_id|integer|null: false|
+
+## Association
+
+- belongs_to :article
 
 ## commentsテーブル
 投稿されたブログにコメントを投稿できる。
