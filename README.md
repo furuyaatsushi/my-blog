@@ -49,7 +49,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false|
+|content|string|null: false|
 |article_id|integer|null: false|
 
 ## Association
