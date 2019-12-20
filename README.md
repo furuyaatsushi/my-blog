@@ -58,10 +58,23 @@
 ## Association
 
 
-## favoriteテーブル
+## favoritesテーブル
 記事にはお気に入り(いいね)をつけることができ、その数を表示したりいいね欄から記事に飛べる。
 
 |Column|Type|Options|
 |------|----|-------|
 |post_id|integer|null: false|
 |user_id|integer|null: false|
+
+## Association
+
+
+## post_tagsテーブル
+一つの記事は複数のタグを持ち、一つのタグは複数の記事を持つ。
+
+|Column|Type|Options|
+|------|----|-------|
+|post_id|integer|null: false|
+|tag_id|integer|null: false|
+
+## Association
