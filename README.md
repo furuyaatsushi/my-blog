@@ -7,6 +7,10 @@
 
 # DB設計
 
+## ER図
+
+<img width="984" alt="スクリーンショット 2019-12-21 2 13 32" src="https://user-images.githubusercontent.com/52952732/71274846-99777c80-2397-11ea-905c-2b4fd5cbef7f.png">
+
 ## usersテーブル
 ユーザーは自己紹介文とアイコンを設定できる。
 
