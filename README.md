@@ -40,7 +40,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|null: false|
+|content|text|null: false|
 |user_id|integer|null: false|
 |post_id|integer|null: false|
 
@@ -53,7 +53,15 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|tag|string|null: false|
+|name|string|null: false|
 
 ## Association
 
+
+## favoriteテーブル
+記事にはお気に入り(いいね)をつけることができ、その数を表示したりいいね欄から記事に飛べる。
+
+|Column|Type|Options|
+|------|----|-------|
+|post_id|integer|null: false|
+|user_id|integer|null: false|
