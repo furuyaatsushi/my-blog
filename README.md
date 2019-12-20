@@ -21,8 +21,8 @@ Twitterとの連携や、画像の複数投稿、プレビューなどのやっ�
 ## Association
 
 
-## postsテーブル
-投稿されたブログは複数の画像を投稿できる。
+## articleテーブル
+投稿された記事は複数の画像を投稿できる。
 <br>複数のタグをつけることができ、コメントやいいねをつけることができる。
 
 |Column|Type|Options|
@@ -45,3 +45,6 @@ Twitterとの連携や、画像の複数投稿、プレビューなどのやっ�
 |post_id|integer|null: false|
 
 ## Association
+
+
+## tagsテーブル
