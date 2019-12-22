@@ -5,7 +5,10 @@
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     .site-title{
       float: left;
-      padding: 10px 0 10px 30px;
+      padding: 10px 0 10px 10px;
+      img{
+        height: 80px;
+      }
       h1{
         font-size: 30px;
         font-weight: bold;
