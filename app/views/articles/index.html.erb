@@ -1,13 +1,37 @@
 <div class='article-container'>
   <header>
     <div class='site-title'>
-      <%# <h1 class='myblog-title'>My Blog %>
       <%= image_tag 'myblog-title'%>
     </div>
     <div class='to-userpage'>
       <%= image_tag 'men_icon.png' %>
     </div>
   </header>
+
   <div class='main-content article-content'>
+    <div class='top-articles'>
+      <h1 class='top-articles__head'>
+        トップ記事
+      </h1>
+      <div class='top-article-content'>
+        <div class='top-articles__box'>
+          <div class='image-box'>
+          </div>
+          <div class='top-article-right'>
+            <div class='article-title'>
+              タイトル
+            </div>
+            <div class='article-tags'>
+              <h2>タグ：
+              <%# ここで繰り返し処理 %>
+              <li> グルメ
+            </div>
+            <div class='article-favorites'>
+              ☆<span>10
+            </div>
+          <div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
