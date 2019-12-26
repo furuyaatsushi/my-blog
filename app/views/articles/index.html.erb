@@ -8,49 +8,50 @@
     </div>
   </header>
 
-  <div class='main-content article-content'>
-    <div class='top-articles'>
-      <h1 class='top-articles__head'>
-        トップ記事
-      </h1>
-      <div class='top-article-content'>
-        <div class='top-articles__box'>
-          <div class='image-box'>
-          </div>
-          <div class='top-article-right'>
-            <div class='article-title'>
-              タイトル
+  <div class='main-content article-content clearfix'>
+    <div class='articles-list'>
+      <div class='top-articles'>
+        <h1 class='top-articles__head'>
+          トップ記事
+        </h1>
+        <div class='top-article-content'>
+          <div class='top-articles__box'>
+            <div class='image-box'>
             </div>
-            <div class='article-tags'>
-              <h2>タグ：
-              <%# ここで繰り返し処理 %>
-              <li> グルメ
-            </div>
-            <div class='article-favorites'>
-              ☆<span>10
+            <div class='top-article-right'>
+              <div class='article-title'>
+                タイトル
+              </div>
+              <div class='article-tags'>
+                <h2>タグ：
+                <%# ここで繰り返し処理 %>
+                <li> グルメ
+              </div>
+              <div class='article-favorites'>
+                ☆<span>10
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class='side-manu'>
+      <div class='menu-content'>
+        <%= link_to '記事を投稿'%>
+      </div>
 
-  <div class='side-manu'>
-    <div class='menu-content'>
-      <%= link_to '記事を投稿'%>
-    </div>
+      <div class='menu-search'>
+        <%= link_to '記事を検索'%>
+      </div>
 
-    <div class='menu-search'>
-      <%= link_to '記事を検索'%>
-    </div>
+      <div class='menu-content'>
+        <%= link_to 'マイページ'%>
+      </div>
 
-    <div class='menu-content'>
-      <%= link_to 'マイページ'%>
-    </div>
-
-    <div class='menu-content'>
-      <%= link_to 'ログアウト'%>
+      <div class='menu-content'>
+        <%= link_to 'ログアウト'%>
+      </div>
     </div>
   </div>
 
