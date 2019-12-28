@@ -47,10 +47,26 @@
             .image-box{
               height: 80px;
               width: 80px;
+              min-width: 80px;
               background-color: #fff;
             }
             .top-article-right{
               margin-left: 20px;
+              .article-title{
+                max-height: 36px;
+                font-size: 18px;
+                font-weight: bold;
+                overflow: hidden;
+              }
+              .article-tags{
+                margin-top: 5px;
+                li{
+                  display: inline-block;
+                }
+              }
+              .article-favorites{
+                margin-top: 5px;
+              }
             }
           }
         }
