@@ -3,9 +3,17 @@
     <div class='site-title'>
       <%= image_tag 'myblog-title'%>
     </div>
-    <div class='to-userpage'>
-      <%= image_tag 'men_icon.png' %>
-    </div>
+    <% if user_signed_in? %>
+      <div class='to-userpage'>
+        <%= image_tag 'men_icon.png' %>
+      </div>
+    <% else %>
+      <div class='to-userpage'>
+        <div class='signin-btn'>
+          <%= link_to 'ログイン', user_session_path%>
+        </div>
+      </div>
+    <% end %>
   </header>
 
   <div class='main-content article-content clearfix'>
