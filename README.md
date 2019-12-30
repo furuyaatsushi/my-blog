@@ -38,7 +38,7 @@
 |------|----|-------|
 |title|string|null: false|
 |content|string|null: false|
-|user_id|integer|null: false|
+|user_id|integer|null: false, foregin_key: true|
 
 ## Association
 
@@ -55,7 +55,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |content|string|null: false|
-|article_id|integer|null: false|
+|article_id|integer|null: false, foregin_key: true|
 
 ## Association
 
@@ -68,8 +68,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |content|text|null: false|
-|user_id|integer|null: false|
-|article_id|integer|null: false|
+|user_id|integer|null: false, foregin_key: true|
+|article_id|integer|null: false, foregin_key: true|
 
 ## Association
 
@@ -94,8 +94,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|article_id|integer|null: false|
-|user_id|integer|null: false|
+|article_id|integer|null: false, foregin_key: true|
+|user_id|integer|null: false, foregin_key: true|
 
 ## Association
 
@@ -107,8 +107,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|article_id|integer|null: false|
-|tag_id|integer|null: false|
+|article_id|integer|null: false, foregin_key: true|
+|tag_id|integer|null: false, foregin_key: true|
 
 ## Association
 
