@@ -5,7 +5,11 @@
     </div>
     <% if user_signed_in? %>
       <div class='to-userpage'>
-        <%= image_tag 'men_icon.png' %>
+        <% if current_user.icon.nil? %>
+          <%= image_tag 'men_icon.png' %>
+        <% else %>
+          <%= image_tag current_user.icon %>
+        <% end %>
       </div>
     <% else %>
       <div class='to-userpage'>
