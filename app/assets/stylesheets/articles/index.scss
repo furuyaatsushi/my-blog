@@ -1,38 +1,4 @@
 .article-container{
-  header{
-    height: 100px;
-    background-color: #00bfff;
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    .site-title{
-      float: left;
-      padding: 10px 0 10px 10px;
-      img{
-        height: 80px;
-      }
-    }
-    .to-userpage{
-      padding: 25px 30px 25px 0;
-      height: 100%;
-      float: right;
-      box-sizing: border-box;
-      img{
-        height: 50px;
-        background-color: #fff;
-        border-radius: 50%;
-      }
-      .signin-btn{
-        width: 100px;
-        text-align: center;
-        background: #000080;
-        border-radius: 25%;
-        a{
-          color: #fff;
-          line-height: 50px;
-          text-decoration: none;
-        }
-      }
-    }
-  }
   .article-content{
     width: 100%;
     padding: 20px;

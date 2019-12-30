@@ -1,24 +1,6 @@
 <div class='article-container'>
-  <header>
-    <div class='site-title'>
-      <%= image_tag 'myblog-title'%>
-    </div>
-    <% if user_signed_in? %>
-      <div class='to-userpage'>
-        <% if current_user.icon.nil? %>
-          <%= image_tag 'men_icon.png' %>
-        <% else %>
-          <%= image_tag current_user.icon %>
-        <% end %>
-      </div>
-    <% else %>
-      <div class='to-userpage'>
-        <div class='signin-btn'>
-          <%= link_to 'ログイン', user_session_path%>
-        </div>
-      </div>
-    <% end %>
-  </header>
+
+  <%= render partial: 'shared/main_header'%>
 
   <div class='main-content article-content clearfix'>
     <div class='articles-list'>
