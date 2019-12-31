@@ -21,7 +21,7 @@
 
         <%= f.fields_for :images do |i| %>
           <div class='field'>
-            <%= i.label :画像%><br>
+            <%= i.label :content, '画像' %><br>
             <%= i.file_field :content %>
           </div>
         <% end %>
