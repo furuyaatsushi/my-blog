@@ -10,12 +10,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
-
     @article = Article.new(article_params)
     @article.save
 
     if @article.save
       redirect_to root_path
+    else
+      redirect_to new_article_path
     end
   end
 
