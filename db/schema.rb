@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191230051707) do
+ActiveRecord::Schema.define(version: 20191231131508) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",                    null: false
@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20191230051707) do
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "content",    null: false
-    t.integer  "article_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "content",    limit: 65535, null: false
+    t.integer  "article_id",               null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["article_id"], name: "index_images_on_article_id", using: :btree
   end
 
