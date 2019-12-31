@@ -19,6 +19,13 @@
           <%= f.text_area :content %>
         </div>
 
+        <%= f.fields_for :images do |i| %>
+          <div class='field'>
+            <%= i.file_field :content %>
+          </div>
+        <% end %>
+
+
         <%= f.submit %>
       <% end %>
     </div>

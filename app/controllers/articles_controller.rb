@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @article.images.build
   end
 
 end
