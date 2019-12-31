@@ -10,7 +10,7 @@
     <div class='common-main'>
       <%= form_for @article do |f| %>
         <div class='field'>
-          <%= f.label :タイトル %><br />
+          <%= f.label :タイトル %><br>
           <%= f.text_field :title, class: 'input-field', placeholder: 'ここにタイトルを入力' %>
         </div>
 
@@ -21,12 +21,14 @@
 
         <%= f.fields_for :images do |i| %>
           <div class='field'>
+            <%= i.label :画像%><br>
             <%= i.file_field :content %>
           </div>
         <% end %>
 
-
-        <%= f.submit %>
+        <div class='actions' >
+          <%= f.submit :投稿 %>
+        </div>
       <% end %>
     </div>
   </div>

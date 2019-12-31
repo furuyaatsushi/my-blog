@@ -22,7 +22,7 @@
         .field{
           label{
             font-weight: bold;
-            font-size: 14px;
+            font-size: 16px;
           }
           textarea{
             margin: 10px 0;
@@ -32,6 +32,19 @@
             border: 1px solid #ccc;
             font-size: 16px;
             padding: 10px 16px 8px;
+          }
+        }
+        .actions{
+          margin-top: 20px;
+          text-align: center;
+          input{
+            width: 200px;
+            height: 50px;
+            background-color: #dc143c;
+            border: 1px solid #dc143c;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
           }
         }
       }
