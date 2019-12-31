@@ -26,6 +26,14 @@
               width: 80px;
               min-width: 80px;
               background-color: #fff;
+              overflow: hidden;
+              img{
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                vertical-align: top;
+                width: 100%;
+              }
             }
             .top-article-right{
               margin-left: 20px;
@@ -36,7 +44,7 @@
                 overflow: hidden;
               }
               .article-tags{
-                margin-top: 5px;
+                margin-top: 10px;
                 li{
                   display: inline-block;
                 }
