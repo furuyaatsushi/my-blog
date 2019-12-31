@@ -12,7 +12,6 @@ class ArticlesController < ApplicationController
   def create
 
     @article = Article.new(article_params)
-    binding.pry
     @article.save
 
     if @article.save
