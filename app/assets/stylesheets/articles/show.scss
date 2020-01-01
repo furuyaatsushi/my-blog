@@ -21,6 +21,17 @@
             line-height: 25px;
           }
         }
+        .article-image{
+          height: 200px;
+          padding: 20px;
+          img{
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            vertical-align: top;
+            width: 160px;
+          }
+        }
       }
     }
   }
@@ -34,6 +45,15 @@
     .article-show-content{
       width: calc(100% - 300px);
       float: left;
+      .article-show-main{
+        .article-image{
+          height: 150px;
+          padding: 20px;
+          img{
+            width: 110px;
+          }
+        }
+      }
     }
   }
 }
