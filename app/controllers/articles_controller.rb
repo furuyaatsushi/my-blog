@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
     @articles = Article.all.order('updated_at DESC')
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
   def new
     @article = Article.new
     @article.images.build
