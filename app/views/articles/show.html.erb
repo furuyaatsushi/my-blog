@@ -11,6 +11,12 @@
         <div class='article-text'>
           <%= simple_format @article.content %>
         </div>
+
+        <div class='article-image'>
+          <% @article.images.each do |img| %>
+            <%= image_tag img.content %>
+          <% end %>
+        </div>
       </div>
     </div>
 
