@@ -1,34 +1,58 @@
 .main-header{
-  height: 100px;
+  height: 50px;
   background-color: #00bfff;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   .site-title{
     float: left;
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 10px 20px;
+    height: 100%;
     img{
-      height: 80px;
+      height: 90%;
     }
   }
   .to-userpage{
-    padding: 25px 30px 25px 0;
+    padding: 11px 30px 14px 0;
     height: 100%;
     float: right;
     box-sizing: border-box;
     img{
-      height: 50px;
+      height: 25px;
       background-color: #fff;
       border-radius: 50%;
     }
     .signin-btn{
-      width: 100px;
+      width: 80px;
+      height: 30px;
       text-align: center;
       background: #000080;
       border-radius: 25%;
       a{
         color: #fff;
-        line-height: 50px;
+        line-height: 32px;
         text-decoration: none;
       }
     }
   }
+}
+
+@media screen and (min-width: 768px ){
+.main-header{
+  height: 80px;
+  .to-userpage{
+    padding: 15px 30px 15px 0;
+    img{
+      height: 50px;
+    }
+    .signin-btn{
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      background: #000080;
+      border-radius: 25%;
+      a{
+        line-height: 52px;
+      }
+    }
+  }
+}
 }
