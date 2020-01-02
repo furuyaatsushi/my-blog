@@ -22,15 +22,20 @@
             line-height: 25px;
           }
         }
-        .article-image{
+        h3{
           border-top: 1px solid #f5f5f5;
-          padding: 20px;
+          padding-top: 10px;
+          text-align: center;
+        }
+        .article-image{;
+          padding: 10px 20px 20px 20px;
           img{
             height: 150px;
             -o-object-fit: cover;
             object-fit: cover;
             vertical-align: top;
             width: 150px;
+            border-radius: 5%;
           }
         }
       }

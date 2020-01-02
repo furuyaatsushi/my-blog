@@ -12,6 +12,9 @@
           <%= simple_format @article.content %>
         </div>
 
+        <h3>
+          画像(クリックして拡大)
+        </h3>
         <div class='article-image'>
           <% @article.images.each do |img| %>
             <%= link_to img.content.url, 'data-lightbox': img.content do %>
