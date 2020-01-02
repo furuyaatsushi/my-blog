@@ -2,7 +2,7 @@
 
   <%= render partial: 'shared/main_header'%>
 
-  <div class='show-container'>
+  <div class='show-container clearfix'>
     <div class='article-show-content'>
       <h2>
         <%= @article.title %>
@@ -27,5 +27,7 @@
 
     <%= render partial: 'shared/side' %>
   </div>
+
+  <%= render partial: 'shared/main_footer'%>
 
 </div>
