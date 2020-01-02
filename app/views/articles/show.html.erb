@@ -14,7 +14,9 @@
 
         <div class='article-image'>
           <% @article.images.each do |img| %>
-            <%= image_tag img.content %>
+            <%= link_to img.content.url, 'data-lightbox': img.content do %>
+              <%= image_tag img.content %>
+            <% end %>
           <% end %>
         </div>
       </div>
