@@ -14,14 +14,16 @@
       }
       .article-show-main{
         .article-text{
-          padding: 20px 50px;
+          margin: 20px 50px;
           min-height: 150px;
-          border-bottom: 1px solid #f5f5f5;
+          padding: 5px;
+          border: dashed 1px #afeeee;
           p{
             line-height: 25px;
           }
         }
         .article-image{
+          border-top: 1px solid #f5f5f5;
           padding: 20px;
           img{
             height: 150px;
