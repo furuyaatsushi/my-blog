@@ -1,0 +1,10 @@
+.main-footer{
+  height: 100px;
+  background-color: #696969;
+}
+
+@media screen and (min-width: 768px){
+.main-footer{
+  height: 200px;
+}
+}
