@@ -21,12 +21,14 @@
           <%= f.text_area :content, placeholder: 'ここに本文を入力' %>
         </div>
 
-        <%= f.fields_for :images do |i| %>
-          <div class='field'>
-            <%= i.label :content, '画像' %><br>
-            <%= i.file_field :content %>
-          </div>
-        <% end %>
+        <div class='image-zone'>
+          <h3>画像</h3>
+          <%= f.fields_for :images do |i| %>
+            <div class='field'>
+              <%= i.file_field :content %>
+            </div>
+          <% end %>
+        </div>
 
         <div class='actions' >
           <%= f.submit :投稿 %>

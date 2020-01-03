@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @article.images.build
+    5.times{@article.images.build}
   end
 
   def create
