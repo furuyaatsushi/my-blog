@@ -11,9 +11,15 @@
       </div>
       <div class='share-other'>
         その他の方法でシェア<br>
-        <%= image_tag 'facebook'%>
-        <%= image_tag 'instagram'%>
-        <%= image_tag 'line'%>
+        <%= link_to 'https://www.facebook.com/' do %>
+          <%= image_tag 'facebook'%>
+        <% end %>
+        <%= link_to 'https://www.instagram.com/' do %>
+          <%= image_tag 'instagram'%>
+        <% end %>
+        <%= link_to 'https://line.me/ja/' do %>
+          <%= image_tag 'line'%>
+        <% end %>
         <%= image_tag 'mail'%>
       </div>
   </div>
