@@ -9,12 +9,14 @@
       color: #fff;
     }
     .share-twitter{
-      display: inline-block;
       color: #fff;
       width: 50%;
+      .fa{
+        background: #fff;
+        color: #00acee;
+      }
     }
     div{
-      display: inline-block;
       color: #fff;
     }
   }
@@ -23,5 +25,13 @@
 @media screen and (min-width: 768px){
 .main-footer{
   height: 150px;
+  .share-area{
+    .share-twitter{
+      display: inline-block;
+    }
+    div{
+      display: inline-block;
+    }
+  }
 }
 }
