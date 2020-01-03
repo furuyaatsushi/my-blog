@@ -7,17 +7,19 @@
       font-size: 20px;
       font-weight: bold;
       color: #fff;
+      margin-bottom: 10px;
     }
-    .share-twitter{
-      color: #fff;
-      width: 50%;
-      .fa{
-        background: #fff;
-        color: #00acee;
+    .share-select{
+      .share-twitter{
+        color: #fff;
+        img{
+          height: 20px;
+          border-radius: 20%;
+        }
       }
-    }
-    div{
-      color: #fff;
+      .share-other{
+        color: #fff;
+      }
     }
   }
 }
@@ -26,11 +28,14 @@
 .main-footer{
   height: 150px;
   .share-area{
-    .share-twitter{
-      display: inline-block;
-    }
-    div{
-      display: inline-block;
+    .share-select{
+      display: flex;
+      .share-twitter{
+        width: 49%;
+      }
+      .share-other{
+        width: 49%;
+      }
     }
   }
 }
