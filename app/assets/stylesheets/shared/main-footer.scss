@@ -1,5 +1,4 @@
 .main-footer{
-  height: 100px;
   background-color: #333333;
   padding: 20px;
   .share-area{
@@ -12,13 +11,20 @@
     .share-select{
       .share-twitter{
         color: #fff;
+        margin-bottom: 10px;
         img{
-          height: 20px;
+          margin-top: 10px;
+          height: 40px;
           border-radius: 20%;
         }
       }
       .share-other{
         color: #fff;
+        img{
+          margin: 10px 10px 0 0;
+          height: 40px;
+          border-radius: 20%;
+        }
       }
     }
   }
