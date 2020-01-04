@@ -19,6 +19,16 @@
     .common-main{
       padding: 20px;
       form{
+        ul{
+          padding: 10px;
+          margin-bottom: 10px;
+          color: #ff3333;
+          background-color: #ffcccc;
+          border: 2px solid #ff3333;
+          li{
+            line-height: 20px;
+          }
+        }
         .field{
           label{
             font-weight: bold;
