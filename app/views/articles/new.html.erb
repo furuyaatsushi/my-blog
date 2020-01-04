@@ -25,9 +25,7 @@
           <h3>画像</h3>
           <div class='upload-box'>
             <%= f.fields_for :images do |i| %>
-              <div class='field'>
-                <%= i.file_field :content %>
-              </div>
+              <%= i.file_field :content, id: 'post-image' %>
             <% end %>
           </div>
         </div>
