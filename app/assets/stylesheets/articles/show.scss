@@ -29,13 +29,16 @@
         }
         .article-image{
           padding: 10px 20px 20px 20px;
-          img{
-            height: 150px;
-            -o-object-fit: cover;
-            object-fit: cover;
-            vertical-align: top;
-            width: 150px;
-            border-radius: 5%;
+          a{
+            text-decoration: none;
+            img{
+              height: 150px;
+              -o-object-fit: cover;
+              object-fit: cover;
+              vertical-align: top;
+              width: 150px;
+              border-radius: 5%;
+            }
           }
         }
       }
@@ -53,9 +56,11 @@
       float: left;
       .article-show-main{
         .article-image{
-          img{
-            height: 100px;
-            width: 100px;
+          a{
+            img{
+              height: 100px;
+              width: 100px;
+            }
           }
         }
       }
