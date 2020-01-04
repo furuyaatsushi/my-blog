@@ -10,7 +10,18 @@
       新規投稿
     </h2>
     <div class='common-main'>
+      
       <%= form_for @article do |f| %>
+
+        <% if session[:error].present? %>
+          <ul class="errors">
+            <% session[:error].each do |e| %>
+              <li><%= e %></li>
+            <% end %>
+          </ul>
+          <% session[:error] = nil # 念のため使い終わったら消す %>   
+        <% end %>
+        
         <div class='field'>
           <%= f.label :タイトル %><br>
           <%= f.text_field :title, class: 'input-field', placeholder: 'ここにタイトルを入力' %>
@@ -33,6 +44,7 @@
         <div class='actions' >
           <%= f.submit :投稿 %>
         </div>
+
       <% end %>
     </div>
   </div>

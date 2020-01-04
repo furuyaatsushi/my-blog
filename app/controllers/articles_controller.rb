@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to root_path
     else
+      session[:error] = @article.errors.full_messages
       redirect_to new_article_path
     end
   end
