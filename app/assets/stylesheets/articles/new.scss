@@ -39,8 +39,11 @@
             font-weight: bold;
             margin-bottom: 10px;
           }
-          .field{
-
+          .upload-box{
+            width: 100%;
+            height: 150px;
+            border: 1px dashed #333;
+            background-color: #cccccc;
           }
         }
         .actions{

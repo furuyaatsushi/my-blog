@@ -23,11 +23,13 @@
 
         <div class='image-zone'>
           <h3>画像</h3>
-          <%= f.fields_for :images do |i| %>
-            <div class='field'>
-              <%= i.file_field :content %>
-            </div>
-          <% end %>
+          <div class='upload-box'>
+            <%= f.fields_for :images do |i| %>
+              <div class='field'>
+                <%= i.file_field :content %>
+              </div>
+            <% end %>
+          </div>
         </div>
 
         <div class='actions' >
