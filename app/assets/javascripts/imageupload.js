@@ -20,4 +20,11 @@ $(document).on('turbolinks:load', function(){
     var new_input3 = $(`<input name="article[images_attributes][4][content]", type="file", id="article_images_attributes_4_content", class="post-img">`);
     input_area.prepend(new_input3);
   })
+
+
+  $(document).on('change', '.post-img',function() {
+    $('.upload-box').children(":first").css({'display':'block'});
+    $(this).css({'display':'none'});
+  })
+    
 })
