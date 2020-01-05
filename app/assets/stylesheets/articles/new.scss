@@ -54,6 +54,14 @@
             height: 150px;
             border: 1px dashed #333;
             background-color: #cccccc;
+            p{
+              right: 0;
+              left: 0;
+              position: absolute;
+              line-height: 150px;
+              text-align: center;
+              font-weight: bold;
+            }
             .post-img{
               height: 100%;
               width: 100%;

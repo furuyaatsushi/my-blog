@@ -35,6 +35,7 @@
         <div class='image-zone'>
           <h3>画像</h3>
           <div class='upload-box'>
+            <p>クリックして画像をアップロード</p>
             <%= f.fields_for :images do |i| %>
               <%= i.file_field :content, class: "post-img" %>
             <% end %>
