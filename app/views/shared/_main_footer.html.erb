@@ -7,11 +7,13 @@
     <div class='share-select'>
       <div class='share-twitter'>
         ツイッターでシェアする<br>
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
-           data-text="<%= @article.user.name %>の投稿をシェアしました。&#13;&#10;【<%= @article.title %>】" 
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+           class="twitter-share-button" 
+           data-text="気軽に書けるブログを更新中！&#13;&#10;私のページはこちら↓&#13;&#10;&#13;&#10;" 
+           data-url="http://localhost:3000/<%= current_user.id %>" 
            data-hashtags="きょうのブログ" 
            data-lang="ja" 
-           data-show-count="false">
+           data-show-count="false">Tweet
         </a>
       </div>
       <div class='share-other'>
