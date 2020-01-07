@@ -5,8 +5,42 @@
     <div class='userpage-content'>
       <h2>
         <%= @user.name %>
-        さんのページ
+        さんの投稿
       </h2>
+      <div class='user-posts'>
+        <% @user.articles.each do |article| %>
+          <%= link_to article_path(article) do %>
+            <div class='top-articles__box'>
+              <div class='image-box'>
+                <%= image_tag article.images.first.content %>
+              </div>
+              <div class='top-article-right'>
+                <div class='article-title'>
+                  <p>
+                    <%= article.title %>
+                </div>
+
+                <div class='article-writer'>
+                  by
+                  <%= article.user.name %>
+                </div>
+
+                <div class='article-favorites'>
+                  <i class="fa fa-star-o" aria-hidden="true"></i><span>10
+                </div>
+                <div class='article-tags'>
+                  <h3>登録されたタグ：
+                  <%# ここで繰り返し処理 %>
+                  <li> グルメ
+                  <li> 東京
+                  <li> フルーツ
+                </div>
+                
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
 
     <%= render partial: 'shared/side'%>
