@@ -2,7 +2,6 @@ $(document).on('turbolinks:load', function(){
   var input_area = $('.upload-box');
 
   var inputFirst = document.getElementById("article_images_attributes_1_content")
-  console.log(inputFirst)
 
   if (inputFirst == null ){
     $(document).on('change', '#article_images_attributes_0_content', function(){
