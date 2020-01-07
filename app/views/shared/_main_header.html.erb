@@ -7,9 +7,13 @@
   <% if user_signed_in? %>
     <div class='to-userpage'>
       <% if current_user.icon.nil? %>
-        <%= image_tag 'men_icon.png' %>
+        <%= link_to user_path(current_user) do %>
+          <%= image_tag 'men_icon.png' %>
+        <% end %>
       <% else %>
-        <%= image_tag current_user.icon %>
+        <%= link_to user_path(current_user) do %>
+          <%= image_tag current_user.icon %>
+        <% end %>
       <% end %>
     </div>
   <% else %>
