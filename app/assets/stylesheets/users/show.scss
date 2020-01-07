@@ -84,14 +84,36 @@
 }
 
 @media screen and (min-width: 768px){
-  .userpage-container{
-    .userpage-main{
-      margin: 0 auto;
-      width: 100%;
-      .userpage-content{
-        width: calc(100% - 300px);
-        float: left;
-      }
+.userpage-container{
+  .userpage-main{
+    margin: 0 auto;
+    width: 100%;
+    .userpage-content{
+      width: calc(100% - 300px);
+      float: left;
     }
   }
+}
+}
+
+@media screen and (min-width: 868px){
+.userpage-container{
+  .userpage-main{
+    margin: 0 auto;
+    width: 820px;
+    .userpage-content{
+      width: calc(100% - 300px);
+      float: left;
+    }
+  }
+}
+}
+
+@media screen and (min-width: 1068px ){
+.userpage-container{
+  .userpage-main{
+    margin: 0 auto;
+    width: 1020px;
+  }
+}
 }
