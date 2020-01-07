@@ -8,6 +8,14 @@
         <%= @article.title %>
       </h2>
       <div class='article-show-main'>
+
+        <div class='article-user'>
+          <%= image_tag @article.user.icon%>
+          <div class='article-user-name'>
+            <%= @article.user.name %>
+          </div>
+        </div>
+
         <div class='article-text'>
           <%= simple_format @article.content %>
         </div>
