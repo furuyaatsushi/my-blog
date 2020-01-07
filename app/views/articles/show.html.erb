@@ -10,9 +10,19 @@
       <div class='article-show-main'>
 
         <div class='article-user'>
-          <%= image_tag @article.user.icon%>
+          <% if @article.user.icon.nil? %>
+            <%= link_to user_path(@article.user) do %>
+              <%= image_tag 'men_icon.png' %>
+            <% end %>
+          <% else %>
+            <%= link_to user_path(@article.user) do %>
+              <%= image_tag @article.user.icon%>
+            <% end %>
+          <% end %>
           <div class='article-user-name'>
-            <%= @article.user.name %>
+            <%= link_to user_path(@article.user) do %>
+              <%= @article.user.name %>
+            <% end %>
           </div>
         </div>
 
