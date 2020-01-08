@@ -7,4 +7,5 @@ class User < ApplicationRecord
   mount_uploader :icon, IconsUploader
 
   has_many :articles
+  has_many :comments
 end
