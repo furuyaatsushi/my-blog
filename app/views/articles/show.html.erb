@@ -47,7 +47,10 @@
 
           <div class='post-comment'>
             <% if current_user %>
-              
+              <%= form_tag("/articles/#{@article.id}/comments", method: :post) do %>
+                <textarea cols="30" name="content" placeholder="コメントする" rows="2"></textarea>
+                <input type="submit" value="SENT">
+              <% end %>
             <% end %>
           </div>
         </div>
