@@ -43,9 +43,11 @@
 
         <div class='comment-container'>
           <div class='posted-comment-zone'>
-            <% if @article.comments %>
-              <% @article.comments.each do |comment| %>
-                <%= comment.content %>
+            <% if @comments %>
+              <% @comments.each do |comment| %>
+                <div class='comment-box'>
+                  <%= comment.content %>
+                </div>
               <% end %>
             <% end %>
           </div>
