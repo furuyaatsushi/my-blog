@@ -46,6 +46,7 @@
             <% if @comments %>
               <% @comments.each do |comment| %>
                 <div class='comment-box'>
+                  <%= comment.user.name %>
                   <%= comment.content %>
                 </div>
               <% end %>
