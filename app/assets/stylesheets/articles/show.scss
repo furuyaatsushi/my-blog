@@ -67,6 +67,12 @@
             background-color: #cccccc;
             margin-bottom: 10px;
             border-radius: 4px;
+            padding: 10px;
+            .comment-box{
+              padding: 5px;
+              margin-bottom: 5px;
+              background-color: #fff;
+            }
           }
           .post-comment{
             form{
