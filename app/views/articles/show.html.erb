@@ -45,12 +45,15 @@
           <div class='posted-comment-zone'>
             <% if @comments %>
               <% @comments.each do |comment| %>
-                <div class='comment-box'>
+                <div class='comment-box clearfix'>
                   <div class='comment-user-name'>
                     <%= comment.user.name %>
                   </div>
                   <div class='comment-content'>
                     <%= comment.content %>
+                  </div>
+                  <div class='comment-created_at'>
+                    <%= comment.created_at.strftime("%y-%m-%d %H:%M") %>
                   </div>
                 </div>
               <% end %>
