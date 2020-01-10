@@ -3,7 +3,7 @@ class Article < ApplicationRecord
   belongs_to :user
   has_many :images
   has_many :comments
-  hes_many :favorites
+  has_many :favorites
   has_many :favorited_users, through: :fovorite, source: :user
 
   accepts_nested_attributes_for :images
