@@ -10,4 +10,8 @@ class User < ApplicationRecord
   has_many :comments
   has_many :favorites, dependent: :destroy
   has_many :favorited_articles, through: :favorites, source: :article
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 end
