@@ -8,5 +8,6 @@ class User < ApplicationRecord
 
   has_many :articles
   has_many :comments
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
+  has_many :favorited_articles, through: :favorites, source: :article
 end
