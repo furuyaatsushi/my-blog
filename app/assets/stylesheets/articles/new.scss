@@ -70,13 +70,27 @@
           }
           .uploaded-box{
             display: none;
+            float: left;
             width: 20%;
             height: 150px;
             border: 1px dashed #333;
             background-color: #cccccc;
+            .post-img{
+              opacity: 0;
+            }
           }
           .upload-box2{
             display: none;
+            width: 80%;
+            height: 150px;
+            border: 1px dashed #333;
+            background-color: #cccccc;
+            float: right;
+            .post-img{
+              height: 100%;
+              width: 100%;
+              opacity: 0;
+            }
           }
         }
         .actions{
