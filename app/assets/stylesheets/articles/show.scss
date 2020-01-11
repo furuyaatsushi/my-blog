@@ -46,6 +46,9 @@
           button{
             border: none;
             font-size: 20px;
+            .fa-star{
+              color: #ffd700;
+            }
           }
           .favorite-count{
             span{
