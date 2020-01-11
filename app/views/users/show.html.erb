@@ -8,7 +8,7 @@
         さんの投稿
       </h2>
       <div class='user-posts'>
-        <% @user.articles.each do |article| %>
+        <% @articles.each do |article| %>
           <%= link_to article_path(article) do %>
             <div class='top-articles__box'>
               <div class='image-box'>
