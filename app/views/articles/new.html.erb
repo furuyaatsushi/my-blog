@@ -40,6 +40,14 @@
               <%= i.file_field :content, class: "post-img" %>
             <% end %>
           </div>
+          <div class='uploaded-box'>
+            <p>クリックして画像をアップロード</p>
+            <input name="article[images_attributes][0][content]", type="file", id="article_images_attributes_0_content", class="post-img">
+          </div>
+
+          <div class='upload-box2'>
+            <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_1_content", class="post-img">
+          </div>
         </div>
 
         <div class='actions' >

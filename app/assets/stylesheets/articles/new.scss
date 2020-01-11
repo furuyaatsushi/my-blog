@@ -65,12 +65,18 @@
             .post-img{
               height: 100%;
               width: 100%;
-              display: none;
               opacity: 0;
             }
-            #article_images_attributes_0_content{
-              display: block;
-            }
+          }
+          .uploaded-box{
+            display: none;
+            width: 20%;
+            height: 150px;
+            border: 1px dashed #333;
+            background-color: #cccccc;
+          }
+          .upload-box2{
+            display: none;
           }
         }
         .actions{
