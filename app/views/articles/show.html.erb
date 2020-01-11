@@ -4,9 +4,15 @@
 
   <div class='show-container clearfix'>
     <div class='article-show-content'>
-      <h2>
-        <%= @article.title %>
-      </h2>
+      <div class='article-title-box clearfix'>
+        <h2>
+          <%= @article.title %>
+        </h2>
+        <div class='post-time'>
+          <%= @article.created_at.strftime("%y-%m-%d %H:%M") %>
+          に投稿
+        </div>
+      </div>
       <div class='article-show-main'>
 
         <div class='article-user'>
