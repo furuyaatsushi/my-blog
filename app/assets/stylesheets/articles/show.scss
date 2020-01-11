@@ -31,6 +31,15 @@
             line-height: 40px;
             margin-left: 20px;
           }
+          .article-user-name{
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+        .favorite-area{
+          button{
+            border: none;
+          }
         }
         .article-text{
           margin: 20px 50px;

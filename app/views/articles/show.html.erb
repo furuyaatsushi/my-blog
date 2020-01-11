@@ -30,7 +30,10 @@
             <% if current_user.already_favorited?(@article) %>
               <%= button_to 'いいねを取り消す', article_favorite_path(@article), method: :delete %>
             <% else %>
-              <%= button_to 'いいね', article_favorites_path(@article) %>
+              
+              <%= button_to article_favorites_path(@article) do %>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              <% end %>
             <% end %>
           </div>
         </div>
