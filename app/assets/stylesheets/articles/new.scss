@@ -81,7 +81,14 @@
             .preview{
               .preview-image{
                 padding: 5px;
-                height: 100px;
+                height: 120px;
+                img{
+                  height: 100%;
+                  -o-object-fit: cover;
+                  object-fit: cover;
+                  vertical-align: top;
+                  width: 100%;
+                }
               }
             }
           }
