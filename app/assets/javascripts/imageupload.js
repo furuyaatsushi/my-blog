@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function(){
   $(filefield).on('change', filefield, function(e) {
     $('.upload-box2').css({'display':'block'});
     $(this.parentNode).css({'display':'none'});
-    $('.uploaded-box').css({'display':'block'});
+    $('#uploaded-box0').css({'display':'block'});
 
     file = e.target.files[0]
     reader = new FileReader(),
