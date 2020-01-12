@@ -88,12 +88,13 @@
           a{
             text-decoration: none;
             img{
-              height: 150px;
+              height: 120px;
               -o-object-fit: cover;
               object-fit: cover;
               vertical-align: top;
-              width: 150px;
+              width: 120px;
               border-radius: 5%;
+              margin: 2px 2px 2px 0;
             }
           }
         }
