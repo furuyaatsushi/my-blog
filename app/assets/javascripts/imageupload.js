@@ -25,11 +25,30 @@ $(document).on('turbolinks:load', function(){
   //   input_area.prepend(new_input3);
   // })
 
+  var filefield = $('#article_images_attributes_0_content')
 
-  $(document).on('change', '.post-img',function() {
+  $(filefield).on('change', filefield, function(e) {
     $('.upload-box2').css({'display':'block'});
     $(this.parentNode).css({'display':'none'});
     $('.uploaded-box').css({'display':'block'});
-  })
+
+    file = e.target.files[0]
+    reader = new FileReader(),
+    preview = $('#preview0');
+    preview.empty();
+
+    reader.onload = (function(file) {
+      return function(e) {
+        preview.empty();
+        preview.append($('<img>').attr({
+          src: e.target.result,
+          height: "100%",
+          class: "preview",
+          title: file.name
+        }));
+      };
+    })(file);
+    reader.readAsDataURL(file);
+  });
     
 })
