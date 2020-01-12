@@ -51,7 +51,6 @@
           }
           .upload-box{
             position: relative;
-            width: 100%;
             height: 150px;
             border: 1px dashed #333;
             background-color: #cccccc;
@@ -68,6 +67,19 @@
               width: 100%;
               opacity: 0;
             }
+          }
+          #upload-box1{
+            width: 100%;
+          }
+          #upload-box2{
+            display: none;
+            width: 80%;
+            float: right;
+          }
+          #upload-box3{
+            display: none;
+            width: 60%;
+            float: right;
           }
           .uploaded-box{
             display: none;
@@ -92,41 +104,6 @@
                   width: 100%;
                 }
               }
-            }
-          }
-          .upload-box2{
-            position: relative;
-            display: none;
-            width: 80%;
-            height: 150px;
-            border: 1px dashed #333;
-            background-color: #cccccc;
-            float: right;
-            p{
-              right: 0;
-              left: 0;
-              position: absolute;
-              line-height: 150px;
-              text-align: center;
-              font-weight: bold;
-            }
-            .post-img{
-              height: 100%;
-              width: 100%;
-              opacity: 0;
-            }
-          }
-          .upload-box3{
-            display: none;
-            width: 60%;
-            height: 150px;
-            border: 1px dashed #333;
-            background-color: #cccccc;
-            float: right;
-            .post-img{
-              height: 100%;
-              width: 100%;
-              opacity: 0;
             }
           }
         }

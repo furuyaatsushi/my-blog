@@ -34,7 +34,7 @@
 
         <div class='image-zone clearfix'>
           <h3>画像</h3>
-          <div class='upload-box'>
+          <div class='upload-box' id='upload-box1'>
             <p>クリックして画像をアップロード</p>
             <%= f.fields_for :images do |i| %>
               <%= i.file_field :content, class: "post-img" %>
@@ -48,7 +48,7 @@
             <input name="article[images_attributes][0][content]", type="file", id="article_images_attributes_0_content", class="post-img">
           </div>
 
-          <div class='upload-box2'>
+          <div class='upload-box' id='upload-box2'>
             <p>クリックして画像をアップロード</p>
             <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_1_content", class="post-img">
           </div>
@@ -60,8 +60,9 @@
             <input name="article[images_attributes][0][content]", type="file", id="article_images_attributes_0_content", class="post-img">
           </div>
 
-          <div class='upload-box3'>
-            <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_1_content", class="post-img">
+          <div class='upload-box' id='upload-box3'>
+            <p>クリックして画像をアップロード</p>
+            <input name="article[images_attributes][2][content]", type="file", id="article_images_attributes_2_content", class="post-img">
           </div>
         </div>
 

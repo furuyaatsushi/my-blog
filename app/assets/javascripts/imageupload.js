@@ -29,7 +29,7 @@ $(document).on('turbolinks:load', function(){
   var filefield1 = $('#article_images_attributes_1_content')
 
   $(filefield).on('change', filefield, function(e) {
-    $('.upload-box2').css({'display':'block'});
+    $('#upload-box2').css({'display':'block'});
     $(this.parentNode).css({'display':'none'});
     $('#uploaded-box0').css({'display':'block'});
 
@@ -54,7 +54,7 @@ $(document).on('turbolinks:load', function(){
     
 
   $(filefield1).on('change', filefield1, function(e) {
-    $('.upload-box3').css({'display':'block'});
+    $('#upload-box3').css({'display':'block'});
     $(this.parentNode).css({'display':'none'});
     $('#uploaded-box1').css({'display':'block'});
 
