@@ -27,6 +27,7 @@ $(document).on('turbolinks:load', function(){
 
   var filefield = $('#article_images_attributes_0_content')
   var filefield1 = $('#article_images_attributes_1_content')
+  var filefield2 = $('#article_images_attributes_2_content')
 
   $(filefield).on('change', filefield, function(e) {
     $('#upload-box2').css({'display':'block'});
@@ -61,6 +62,30 @@ $(document).on('turbolinks:load', function(){
     file = e.target.files[0]
     reader = new FileReader(),
     preview = $('#preview1');
+    preview.empty();
+
+    reader.onload = (function(file) {
+      return function(e) {
+        preview.empty();
+        preview.append($('<img>').attr({
+          src: e.target.result,
+          height: "100%",
+          class: "preview",
+          title: file.name
+        }));
+      };
+    })(file);
+    reader.readAsDataURL(file);
+  });
+
+  $(filefield2).on('change', filefield2, function(e) {
+    $('#upload-box4').css({'display':'block'});
+    $(this.parentNode).css({'display':'none'});
+    $('#uploaded-box2').css({'display':'block'});
+
+    file = e.target.files[0]
+    reader = new FileReader(),
+    preview = $('#preview2');
     preview.empty();
 
     reader.onload = (function(file) {
