@@ -102,6 +102,24 @@
               text-decoration: none;
             }
           }
+          .current{
+            border: solid 1px #00bfff;
+          }
+          .page{
+            border: solid 1px #00bfff;
+          }
+          .next{
+            border: solid 1px #00bfff;
+          }
+          .last{
+            border: solid 1px #00bfff;
+          }
+          .prev{
+            border: solid 1px #00bfff;
+          }
+          .first{
+            border: solid 1px #00bfff;
+          }
         }
       }
     }
