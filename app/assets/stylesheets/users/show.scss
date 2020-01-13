@@ -43,6 +43,7 @@
             .top-article-right{
               margin-left: 20px;
               color: #333;
+              width: 100%;
               .article-title{
                 max-height: 36px;
                 font-size: 18px;
@@ -67,7 +68,7 @@
                 }
               }
               .article-tags{
-                margin-top: 10px;
+                margin-top: 5px;
                 font-size: 10px;
                 overflow: hidden;
                 li{
@@ -77,6 +78,12 @@
                   padding: 0 2px;
                   margin-right: 5px;
                 }
+              }
+              .article-created_at{
+                font-size: 10px;
+                color: #666666;
+                float: right;
+                margin: 3px 20px 0 0;
               }
             }
           }
