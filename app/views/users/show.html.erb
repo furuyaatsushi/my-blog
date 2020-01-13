@@ -48,6 +48,9 @@
           <% end %>
         <% end %>
       </div>
+      <div class='articles-pagenation'>
+        <%= paginate(@articles) %>
+      </div>
     </div>
 
     <%= render partial: 'shared/side'%>
