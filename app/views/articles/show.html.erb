@@ -63,6 +63,12 @@
           <% end %>
         </div>
 
+        <% if @article.user == current_user %>
+          <div class='article-edit-box'>
+            削除
+          </div>
+        <% end %>
+
         <div class='comment-container'>
           <div class='comment-top'>
             投稿されたコメント
