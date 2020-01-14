@@ -1,9 +1,9 @@
 class Article < ApplicationRecord
 
   belongs_to :user
-  has_many :images
-  has_many :comments
-  has_many :favorites
+  has_many :images, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   has_many :favorited_users, through: :fovorite, source: :user
 
   accepts_nested_attributes_for :images
