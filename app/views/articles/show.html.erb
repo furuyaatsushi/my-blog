@@ -65,7 +65,7 @@
 
         <% if @article.user == current_user %>
           <div class='article-edit-box'>
-            <%= link_to '投稿を削除' %>
+            <%= link_to '投稿を削除', '#', class: 'delete-article' %>
           </div>
         <% end %>
 
