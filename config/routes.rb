@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
     resources :favorites, only: [:create, :destroy]
   end
-  resources :users
+  resources :users do
+    collection do
+      get 'favorites', to: 'users#favorites'
+    end
+  end
 end
