@@ -65,7 +65,7 @@
 
         <% if @article.user == current_user %>
           <div class='article-edit-box'>
-            <%= link_to '編集', '#', class: 'edit-article' %>
+            <%= link_to '編集', edit_article_path(@article), class: 'edit-article' %>
             <%= link_to '投稿を削除', article_path(@article.id), method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'delete-article' %>
           </div>
         <% end %>
