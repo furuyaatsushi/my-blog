@@ -8,51 +8,59 @@
         さんのページ
       </h2>
       <div class='user-posts'>
-        <h3 class='post-list-head'>
-          投稿一覧
-        </h3>
-        <% @articles.each do |article| %>
-          <%= link_to article_path(article) do %>
-            <div class='top-articles__box'>
-              <div class='image-box'>
-                <%= image_tag article.images.first.content %>
-              </div>
-              <div class='top-article-right'>
-                <div class='article-title'>
-                  <p>
-                    <%= article.title %>
-                </div>
+        <div class='articles-list-head'>
+          <div class='posts-list-head active'>
+            投稿一覧
+          </div>
+          <div class='favorites-list-head'>
+            お気に入りした記事
+          </div>
+        </div>
 
-                <div class='article-writer'>
-                  by
-                  <%= article.user.name %>
+        <div class='user-articles'>
+          <% @articles.each do |article| %>
+            <%= link_to article_path(article) do %>
+              <div class='top-articles__box'>
+                <div class='image-box'>
+                  <%= image_tag article.images.first.content %>
                 </div>
+                <div class='top-article-right'>
+                  <div class='article-title'>
+                    <p>
+                      <%= article.title %>
+                  </div>
 
-                <div class='article-favorites'>
-                  <% if current_user.already_favorited?(article) %>
-                    <i class="fa fa-star" aria-hidden="true"></i><span><%= article.favorites.count %></span>
-                  <% else %>
-                    <i class="fa fa-star-o" aria-hidden="true"></i><span><%= article.favorites.count %></span>
-                  <% end %>
+                  <div class='article-writer'>
+                    by
+                    <%= article.user.name %>
+                  </div>
+
+                  <div class='article-favorites'>
+                    <% if current_user.already_favorited?(article) %>
+                      <i class="fa fa-star" aria-hidden="true"></i><span><%= article.favorites.count %></span>
+                    <% else %>
+                      <i class="fa fa-star-o" aria-hidden="true"></i><span><%= article.favorites.count %></span>
+                    <% end %>
+                  </div>
+                  <div class='article-tags'>
+                    <h3>登録されたタグ：
+                    <%# ここで繰り返し処理 %>
+                    <li> グルメ
+                    <li> 東京
+                    <li> フルーツ
+                  </div>
+                  <div class='article-created_at'>
+                    <%= article.created_at.strftime("%y-%m-%d %H:%M") %>
+                  </div>
+                  
                 </div>
-                <div class='article-tags'>
-                  <h3>登録されたタグ：
-                  <%# ここで繰り返し処理 %>
-                  <li> グルメ
-                  <li> 東京
-                  <li> フルーツ
-                </div>
-                <div class='article-created_at'>
-                  <%= article.created_at.strftime("%y-%m-%d %H:%M") %>
-                </div>
-                
               </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
-      <div class='articles-pagenation'>
-        <%= paginate(@articles) %>
+          <div class='articles-pagenation'>
+            <%= paginate(@articles) %>
+          </div>
+        </div>
       </div>
     </div>
 
