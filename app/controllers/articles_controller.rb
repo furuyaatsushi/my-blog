@@ -35,6 +35,18 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def update
+    @article = Article.find(params[:id])
+    @article.update(article_params)
+
+    if @article.save
+      redirect_to root_path
+    else
+      session[:error] = @article.errors.full_messages
+      redirect_to new_article_path
+    end
+  end
+
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
