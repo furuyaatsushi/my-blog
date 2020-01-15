@@ -1,0 +1,113 @@
+<div class='common-container'>
+  <div class='common-header'>
+    <%= link_to root_path do %>
+      <%= image_tag 'signup-header'%>
+    <% end %>
+  </div>
+
+  <div class='common-content'>
+    <h2>
+      記事の編集
+    </h2>
+    <div class='common-main'>
+
+      <%= form_for @article do |f| %>
+
+        <% if session[:error].present? %>
+          <ul class="errors">
+            <% session[:error].each do |e| %>
+              <li><%= e %></li>
+            <% end %>
+          </ul>
+          <% session[:error] = nil # 念のため使い終わったら消す %>   
+        <% end %>
+        
+        <div class='field'>
+          <%= f.label :タイトル %><br>
+          <%= f.text_field :title, class: 'input-field', placeholder: 'ここにタイトルを入力' %>
+        </div>
+
+        <div class='field'>
+          <%= f.label :本文 %><br>
+          <%= f.text_area :content, placeholder: 'ここに本文を入力' %>
+        </div>
+
+        <div class='image-zone clearfix'>
+          <h3>画像</h3>
+          
+          <%# 画像アップロードするエリア %>
+          <div class='upload-box' id='upload-box1'>
+            <p>クリックして画像をアップロード</p>
+            <%= f.fields_for :images do |i| %>
+              <%= i.file_field :content, class: "post-img" %>
+            <% end %>
+          </div>
+          <div class='uploaded-box' id='uploaded-box0'>
+            <div class='preview'>
+              <div id='preview0' class='preview-image'>
+              </div>
+            </div>
+            <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_0_content", class="post-img">
+          </div>
+
+          <div class='upload-box' id='upload-box2'>
+            <p>クリックして画像をアップロード</p>
+            <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_1_content", class="post-img">
+          </div>
+          <div class='uploaded-box' id='uploaded-box1'>
+            <div class='preview'>
+              <div id='preview1' class='preview-image'>
+              </div>
+            </div>
+            <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_0_content", class="post-img">
+          </div>
+
+          <div class='upload-box' id='upload-box3'>
+            <p>クリックして画像をアップロード</p>
+            <input name="article[images_attributes][2][content]", type="file", id="article_images_attributes_2_content", class="post-img">
+          </div>
+          <div class='uploaded-box' id='uploaded-box2'>
+            <div class='preview'>
+              <div id='preview2' class='preview-image'>
+              </div>
+            </div>
+            <input name="article[images_attributes][2][content]", type="file", id="article_images_attributes_2_content", class="post-img">
+          </div>
+
+          <div class='upload-box' id='upload-box4'>
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <input name="article[images_attributes][3][content]", type="file", id="article_images_attributes_3_content", class="post-img">
+          </div>
+          <div class='uploaded-box' id='uploaded-box3'>
+            <div class='preview'>
+              <div id='preview3' class='preview-image'>
+              </div>
+            </div>
+            <input name="article[images_attributes][3][content]", type="file", id="article_images_attributes_3_content", class="post-img">
+          </div>
+
+          <div class='upload-box' id='upload-box5'>
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <input name="article[images_attributes][4][content]", type="file", id="article_images_attributes_4_content", class="post-img">
+          </div>
+          <div class='uploaded-box' id='uploaded-box4'>
+            <div class='preview'>
+              <div id='preview4' class='preview-image'>
+              </div>
+            </div>
+            <input name="article[images_attributes][4][content]", type="file", id="article_images_attributes_4_content", class="post-img">
+          </div>
+
+        </div>
+
+        <div class='actions' >
+          <%= f.submit :更新 %>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+
+  <footer class='common-footer'>
+  </footer>
+</div>
