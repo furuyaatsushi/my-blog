@@ -20,19 +20,21 @@
           font-size: 18px;
           font-weight: bold;
           margin-bottom: 15px;
-          border-bottom: solid 1px #333;
           .posts-list-head{
             width: 50%;
             text-align: center;
             padding: 10px;
+            border-bottom: solid 1px #333;
           }
           .favorites-list-head{
             width: 50%;
             text-align: center;
             padding: 10px;
+            border-bottom: solid 1px #333;
           }
           .active{
             background-color: #c0c0c0;
+            border-bottom: solid 2px #dc143c;
           }
         }
         .user-articles{
