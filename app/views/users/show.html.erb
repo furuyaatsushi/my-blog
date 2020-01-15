@@ -8,6 +8,9 @@
         さんのページ
       </h2>
       <div class='user-posts'>
+        <h3 class='post-list-head'>
+          投稿一覧
+        </h3>
         <% @articles.each do |article| %>
           <%= link_to article_path(article) do %>
             <div class='top-articles__box'>

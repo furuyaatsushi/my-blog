@@ -15,6 +15,14 @@
       }
       .user-posts{
         padding-top: 15px;
+        .post-list-head{
+          font-size: 20px;
+          font-weight: bold;
+          width: 30%;
+          margin-bottom: 15px;
+          padding-bottom: 5px;
+          border-bottom: solid 1px #333;
+        }
         a{
           text-decoration: none;
           .top-articles__box{
