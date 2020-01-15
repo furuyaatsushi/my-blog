@@ -36,12 +36,26 @@
           <h3>画像</h3>
           
           <%# 画像アップロードするエリア %>
+
+
+          <% @article.images.each do |img| %>
+            <%= f.fields_for :images, img do |i| %>
+              <div class='preview-box' id='preview-box0'>
+                <div class='preview'>
+                  <div id="preview<%= i.index %>" class='preview-image'>
+                    <%= image_tag img.content %>
+                  </div>
+                </div>
+                <%= i.file_field :content, class: "post-img" %>
+              </div>
+            <% end %>
+          <% end %>
+
           <div class='upload-box' id='upload-box1'>
             <p>クリックして画像をアップロード</p>
-            <%= f.fields_for :images do |i| %>
-              <%= i.file_field :content, class: "post-img" %>
-            <% end %>
           </div>
+
+
           <div class='uploaded-box' id='uploaded-box0'>
             <div class='preview'>
               <div id='preview0' class='preview-image'>
