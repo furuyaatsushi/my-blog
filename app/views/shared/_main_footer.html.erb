@@ -5,17 +5,23 @@
     </h2>
 
     <div class='share-select'>
-      <div class='share-twitter'>
-        ツイッターでシェアする<br>
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
-           class="twitter-share-button" 
-           data-text="気軽に書けるブログを更新中！&#13;&#10;私のページはこちら↓&#13;&#10;&#13;&#10;" 
-           data-url="http://localhost:3000/users/<%= current_user.id %>" 
-           data-hashtags="きょうのブログ" 
-           data-lang="ja" 
-           data-show-count="false">Tweet
-        </a>
-      </div>
+      <% if user_signed_in? %>
+        <div class='share-twitter'>
+          ツイッターでシェアする<br>
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+            class="twitter-share-button" 
+            data-text="気軽に書けるブログを更新中！&#13;&#10;私のページはこちら↓&#13;&#10;&#13;&#10;" 
+            data-url="http://localhost:3000/users/<%= current_user.id %>" 
+            data-hashtags="きょうのブログ" 
+            data-lang="ja" 
+            data-show-count="false">Tweet
+          </a>
+        </div>
+      <% else %>
+        <div class='share-twitter'>
+          ツイッターでシェアするにはログインしてください
+        </div>
+      <% end %>
       <div class='share-other'>
         その他の方法でシェア<br>
         <%= link_to 'https://www.facebook.com/' do %>

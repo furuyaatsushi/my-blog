@@ -28,11 +28,16 @@
                   </div>
 
                   <div class='article-favorites'>
-                    <% if current_user.already_favorited?(article) %>
-                      <i class="fa fa-star" aria-hidden="true"></i><span><%= article.favorites.count %></span>
+                    <% if user_signed_in? %>
+                      <% if current_user.already_favorited?(article) %>
+                        <i class="fa fa-star" aria-hidden="true"></i><span><%= article.favorites.count %></span>
+                      <% else %>
+                        <i class="fa fa-star-o" aria-hidden="true"></i><span><%= article.favorites.count %></span>
+                      <% end %>
                     <% else %>
                       <i class="fa fa-star-o" aria-hidden="true"></i><span><%= article.favorites.count %></span>
                     <% end %>
+                      
                   </div>
                   <div class='article-tags'>
                     <h2>登録されたタグ：
