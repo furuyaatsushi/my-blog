@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     @article.save
 
     if @article.save
-      redirect_to root_path
+      redirect_to root_path, notice: '投稿が完了しました'
     else
       session[:error] = @article.errors.full_messages
       redirect_to new_article_path
