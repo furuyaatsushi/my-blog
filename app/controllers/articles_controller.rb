@@ -22,8 +22,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.save
-
+    tag_list = params[:tag_name].split(",")
     if @article.save
+      @article.save_article(tag_list)
       redirect_to root_path, notice: '投稿が完了しました'
     else
       session[:error] = @article.errors.full_messages
