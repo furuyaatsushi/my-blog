@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200117142104) do
+ActiveRecord::Schema.define(version: 20200117142523) do
+
+  create_table "article_tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "article_id", null: false
+    t.integer  "tag_id",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_article_tags_on_article_id", using: :btree
+    t.index ["tag_id"], name: "index_article_tags_on_tag_id", using: :btree
+  end
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",                    null: false
@@ -68,6 +77,7 @@ ActiveRecord::Schema.define(version: 20200117142104) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "article_tags", "articles"
   add_foreign_key "comments", "articles"
   add_foreign_key "comments", "users"
   add_foreign_key "images", "articles"
