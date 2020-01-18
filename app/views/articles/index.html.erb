@@ -41,10 +41,9 @@
                   </div>
                   <div class='article-tags'>
                     <h2>登録されたタグ：
-                    <%# ここで繰り返し処理 %>
-                    <li> グルメ
-                    <li> 東京
-                    <li> フルーツ
+                    <% article.tags.each do |tag| %>
+                      <li><%= tag.name %>
+                      <% end %>
                   </div>
                   <div class='article-created_at'>
                     <%= article.created_at.strftime("%y-%m-%d %H:%M") %>
