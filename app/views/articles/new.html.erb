@@ -101,8 +101,8 @@
         </div>
 
         <div class='tag-box'>
-          <%= f.label :tag %><br>
-          <%= f.text_field :tag_name, value: @tag_list %>
+          <%= f.label :タグ %><br>
+          <%= f.text_field :tag_name, value: @tag_list, class: 'input-field', placeholder: "例) グルメ,スポーツ  ※必ずカンマ(,)で区切ってください" %>
         </div>
 
         <div class='actions' >
