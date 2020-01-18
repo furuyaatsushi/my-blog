@@ -43,7 +43,7 @@
                     <h2>登録されたタグ：
                     <% article.tags.each do |tag| %>
                       <li><%= tag.name %>
-                      <% end %>
+                    <% end %>
                   </div>
                   <div class='article-created_at'>
                     <%= article.created_at.strftime("%y-%m-%d %H:%M") %>
