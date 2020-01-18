@@ -52,9 +52,12 @@
           <%= simple_format @article.content %>
         </div>
 
+        <h3>
+          登録されたタグ
+        </h3>
         <div class='article-tags'>
           <% @article.tags.each do |tag| %>
-            <%= tag.name %>
+            <li><%= tag.name %>
           <% end %>
         </div>
 

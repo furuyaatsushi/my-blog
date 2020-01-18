@@ -83,6 +83,16 @@
           font-size: 14px;
           font-weight: bold;
         }
+        .article-tags{
+          padding: 10px 20px;
+          li{
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #c0c0c0;
+            border-radius: 20%;
+            padding: 2px;
+          }
+        }
         .article-image{
           padding: 10px 20px 20px 20px;
           a{
