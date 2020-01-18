@@ -101,7 +101,8 @@
         </div>
 
         <div class='tag-box'>
-          <textarea name="tag_name" class="form-control post_form"></textarea>
+          <%= f.label :tag %><br>
+          <%= f.text_field :tag_name, value: @tag_list %>
         </div>
 
         <div class='actions' >

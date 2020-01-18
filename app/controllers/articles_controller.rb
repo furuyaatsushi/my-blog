@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.save
-    tag_list = params[:tag_name].split(",")
+    tag_list = params[:article][:tag_name].split(",")
     if @article.save
       @article.save_articles(tag_list)
       redirect_to root_path, notice: '投稿が完了しました'

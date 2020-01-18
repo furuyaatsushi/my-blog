@@ -52,6 +52,12 @@
           <%= simple_format @article.content %>
         </div>
 
+        <div class='article-tags'>
+          <% @article.tags.each do |tag| %>
+            <%= tag.name %>
+          <% end %>
+        </div>
+
         <h3>
           画像(クリックして拡大)
         </h3>
