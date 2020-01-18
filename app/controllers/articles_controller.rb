@@ -34,13 +34,15 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    @tag_list = @article.tags.pluck(:name).join(",")
   end
 
   def update
     @article = Article.find(params[:id])
     @article.update(article_params)
-
+    tag_list = params[:article][:tag_name].split(",")
     if @article.save
+      @article.save_articles(tag_list)
       redirect_to root_path, notice: '更新が完了しました'
     else
       session[:error] = @article.errors.full_messages
