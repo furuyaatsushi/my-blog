@@ -65,6 +65,11 @@
     .post-img{
       opacity: 0;
     }
+    .uploaded-delete{
+      margin-top: 5px;
+      text-align: center;
+      color: #00bfff;
+    }
     .preview{
       .preview-image{
         padding: 5px;
@@ -86,6 +91,11 @@
     margin: 0 2px;
     border: 1px dashed #333;
     background-color: #cccccc;
+    .uploaded-delete{
+      margin-top: 5px;
+      text-align: center;
+      color: #00bfff;
+    }
     input{
       display: none;
     }

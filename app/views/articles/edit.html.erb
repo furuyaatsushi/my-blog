@@ -46,6 +46,9 @@
                     <%= image_tag img.content %>
                   </div>
                 </div>
+                <div class='uploaded-delete' id="image-delete<%= i.index %>">
+                  削除
+                </div>
                 <%= i.file_field :content, class: "post-img" %>
               </div>
             <% end %>
@@ -61,6 +64,9 @@
               <div id='preview0' class='preview-image'>
               </div>
             </div>
+            <div class='uploaded-delete'>
+              削除
+            </div>
             <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_0_content", class="post-img">
           </div>
 
@@ -72,6 +78,9 @@
             <div class='preview'>
               <div id='preview1' class='preview-image'>
               </div>
+            </div>
+            <div class='uploaded-delete'>
+              削除
             </div>
             <input name="article[images_attributes][1][content]", type="file", id="article_images_attributes_0_content", class="post-img">
           </div>
@@ -85,6 +94,9 @@
               <div id='preview2' class='preview-image'>
               </div>
             </div>
+            <div class='uploaded-delete'>
+              削除
+            </div>
             <input name="article[images_attributes][2][content]", type="file", id="article_images_attributes_2_content", class="post-img">
           </div>
 
@@ -97,6 +109,9 @@
               <div id='preview3' class='preview-image'>
               </div>
             </div>
+            <div class='uploaded-delete'>
+              削除
+            </div>
             <input name="article[images_attributes][3][content]", type="file", id="article_images_attributes_3_content", class="post-img">
           </div>
 
@@ -108,6 +123,9 @@
             <div class='preview'>
               <div id='preview4' class='preview-image'>
               </div>
+            </div>
+            <div class='uploaded-delete'>
+              削除
             </div>
             <input name="article[images_attributes][4][content]", type="file", id="article_images_attributes_4_content", class="post-img">
           </div>
