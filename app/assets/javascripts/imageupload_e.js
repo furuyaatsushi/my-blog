@@ -16,6 +16,13 @@ $(document).on('turbolinks:load', function(){
       && document.getElementById("previewed2") != null
       && document.getElementById("previewed3") == null){
       $('#upload-box4').css({'display':'block'});
+    }else if(
+      document.getElementById("previewed0") != null
+      && document.getElementById("previewed1") != null
+      && document.getElementById("previewed2") != null
+      && document.getElementById("previewed3") != null
+      && document.getElementById("previewed4") == null){
+      $('#upload-box5').css({'display':'block'});
     };
   })
 });

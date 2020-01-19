@@ -46,10 +46,7 @@
                     <%= image_tag img.content %>
                   </div>
                 </div>
-                <%= i.label :content do %>
-                  変更
-                  <%= i.file_field :content, class: "post-img" %>
-                <% end %>
+                <%= i.file_field :content, class: "post-img" %>
               </div>
             <% end %>
           <% end %>
