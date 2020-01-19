@@ -4,7 +4,10 @@
     text-align: center;
     img{
       width: 200px;
-      opacity: 0.7;
+      height: 60px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      vertical-align: top;
     }
   }
   .common-content{
