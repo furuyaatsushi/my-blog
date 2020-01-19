@@ -25,4 +25,8 @@ $(document).on('turbolinks:load', function(){
       $('#upload-box5').css({'display':'block'});
     };
   })
+
+  $('#image-delete0').on('click', function(){
+
+  })
 });
