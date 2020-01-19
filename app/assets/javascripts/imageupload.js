@@ -10,6 +10,7 @@ $(document).on('turbolinks:load', function(){
     $('#upload-box2').css({'display':'block'});
     $(this.parentNode).css({'display':'none'});
     $('#uploaded-box0').css({'display':'block'});
+    $('#preview-box0').css({'display':'none'});
 
     file = e.target.files[0]
     reader = new FileReader(),

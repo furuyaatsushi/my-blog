@@ -42,11 +42,14 @@
             <%= f.fields_for :images, img do |i| %>
               <div class='preview-box' id='preview-box0'>
                 <div class='preview'>
-                  <div id="preview<%= i.index %>" class='preview-image'>
+                  <div id="previewed<%= i.index %>" class='preview-image'>
                     <%= image_tag img.content %>
                   </div>
                 </div>
-                <%= i.file_field :content, class: "post-img" %>
+                <%= i.label :content do %>
+                  変更
+                  <%= i.file_field :content, class: "post-img" %>
+                <% end %>
               </div>
             <% end %>
           <% end %>
