@@ -48,6 +48,7 @@
                 </div>
                 <div class='uploaded-delete' id="image-delete<%= i.index %>">
                   削除
+                  <%= i.check_box :_destroy %>
                 </div>
                 <%= i.file_field :content, class: "post-img" %>
               </div>

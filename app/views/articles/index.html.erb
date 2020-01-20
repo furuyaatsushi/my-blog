@@ -14,7 +14,9 @@
             <%= link_to article_path(article) do %>
               <div class='top-articles__box'>
                 <div class='image-box'>
-                  <%= image_tag article.images.first.content %>
+                  <% if article.images.present? %>
+                    <%= image_tag article.images.first.content %>
+                  <% end %>
                 </div>
                 <div class='top-article-right'>
                   <div class='article-title'>
