@@ -91,13 +91,17 @@
     margin: 0 2px;
     border: 1px dashed #333;
     background-color: #cccccc;
+    .uploaded-edit{
+      label{
+        input{
+          display: none;
+        }
+      }
+    }
     .uploaded-delete{
       margin-top: 5px;
       text-align: center;
       color: #00bfff;
-    }
-    .post-img{
-      display: none;
     }
     .preview{
       .preview-image{
