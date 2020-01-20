@@ -91,17 +91,21 @@
     margin: 0 2px;
     border: 1px dashed #333;
     background-color: #cccccc;
-    .uploaded-edit{
-      label{
-        input{
-          display: none;
+    .edit-box{
+      display: flex;
+      .uploaded-edit{
+        margin: 5px 5px 0 15px;
+        color: #00bfff;
+        label{
+          input{
+            display: none;
+          }
         }
       }
-    }
-    .uploaded-delete{
-      margin-top: 5px;
-      text-align: center;
-      color: #00bfff;
+      .uploaded-delete{
+        margin: 5px;
+        color: #00bfff;
+      }
     }
     .preview{
       .preview-image{

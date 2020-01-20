@@ -46,15 +46,17 @@
                     <%= image_tag img.content %>
                   </div>
                 </div>
-                <div class='uploaded-edit'>
-                  <%= i.label :content do %>
-                    編集
-                    <%= i.file_field :content, class: "post-img" %>
-                  <% end %>
-                </div>
-                <div class='uploaded-delete' id="image-delete<%= i.index %>">
-                  削除
-                  <%= i.check_box :_destroy %>
+                <div class='edit-box'>
+                  <div class='uploaded-edit'>
+                    <%= i.label :content do %>
+                      編集
+                      <%= i.file_field :content, class: "post-img" %>
+                    <% end %>
+                  </div>
+                  <div class='uploaded-delete' id="image-delete<%= i.index %>">
+                    削除
+                    <%= i.check_box :_destroy %>
+                  </div>
                 </div>
               </div>
             <% end %>
