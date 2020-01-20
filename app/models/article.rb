@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   has_many :article_tags, dependent: :destroy
   has_many :tags, through: :article_tags
 
-  accepts_nested_attributes_for :images
+  accepts_nested_attributes_for :images, allow_destroy: true
 
   validates :title, presence: true, length: { maximum: 40 }
   validates :content, presence: true
