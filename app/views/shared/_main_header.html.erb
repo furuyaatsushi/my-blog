@@ -1,7 +1,7 @@
 <header class='main-header'>
   <div class='site-title'>
     <%= link_to root_path do %>
-      <%= image_tag 'myblog-title'%>
+      <%= image_tag asset_path('myblog-title')%>
     <% end %>
   </div>
   <% if user_signed_in? %>
