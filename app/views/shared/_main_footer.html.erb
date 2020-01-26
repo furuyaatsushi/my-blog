@@ -25,15 +25,15 @@
       <div class='share-other'>
         その他の方法でシェア<br>
         <%= link_to 'https://www.facebook.com/' do %>
-          <%= image_tag 'facebook'%>
+          <img src="<%=asset_path "facebook" %>">
         <% end %>
         <%= link_to 'https://www.instagram.com/' do %>
-          <%= image_tag 'instagram'%>
+          <img src="<%=asset_path "instagram" %>">
         <% end %>
         <%= link_to 'https://line.me/ja/' do %>
-          <%= image_tag 'line'%>
+          <img src="<%=asset_path "line" %>">
         <% end %>
-        <%= image_tag 'mail'%>
+        <img src="<%=asset_path "mail" %>">
       </div>
   </div>
 </footer>
