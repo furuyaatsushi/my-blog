@@ -1,9 +1,9 @@
 <div class='search-container'>
   <%= render partial: 'shared/main_header' %>
 
-  <div>
-    <% @articles.each do |article| %>
-      <%= article.title %>
-    <% end %>
+  <div class='search-main clearfix'>
+    <div class='search-content'>
+    </div>
+    <%= render partial: 'shared/side'%>
   </div>
 </div>
