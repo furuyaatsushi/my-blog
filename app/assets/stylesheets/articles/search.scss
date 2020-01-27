@@ -92,14 +92,36 @@
 }
 
 @media screen and (min-width: 768px){
-  .search-container{
-    .search-main{
-      margin: 0 auto;
-      width: 100%;
-      .search-content{
-        width: calc(100% - 300px);
-        float: left;
-      }
+.search-container{
+  .search-main{
+    margin: 0 auto;
+    width: 100%;
+    .search-content{
+      width: calc(100% - 300px);
+      float: left;
     }
   }
+}
+}
+
+@media screen and (min-width: 868px){
+.search-container{
+  .search-main{
+    margin: 0 auto;
+    width: 820px;
+    .search-content{
+      width: calc(100% - 300px);
+      float: left;
+    }
   }
+}
+}
+
+@media screen and (min-width: 1068px ){
+.search-container{
+  .search-main{
+    margin: 0 auto;
+    width: 1020px;
+  }
+}
+}
