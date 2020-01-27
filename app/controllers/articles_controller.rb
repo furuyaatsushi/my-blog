@@ -50,6 +50,9 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def search
+  end
+
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
