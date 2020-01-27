@@ -1,3 +1,9 @@
 <div class='search-container'>
   <%= render partial: 'shared/main_header' %>
+
+  <div>
+    <% @articles.each do |article| %>
+      <%= article.title %>
+    <% end %>
+  </div>
 </div>
