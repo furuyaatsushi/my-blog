@@ -51,6 +51,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
+    @articles = Article.where('title LIKE(?)', "%#{params[:search]}%")
   end
 
   def destroy
