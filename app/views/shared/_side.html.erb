@@ -10,6 +10,10 @@
     <%= link_to '記事を検索'%>
     <i class="fa fa-chevron-right" aria-hidden="true"></i>
   </div>
+    <%= form_tag search_articles_path, method: 'get' do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :name => nil %>
+    <% end %>
   <div class='search-pulldown'>
 
   </div>
