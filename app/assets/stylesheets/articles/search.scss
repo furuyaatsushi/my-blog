@@ -1,0 +1,105 @@
+.search-container{
+  .search-main{
+    width: 100%;
+    padding: 20px 20px 25% 20px;
+    .search-content{
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: rgba(216, 44, 44, 0.18) 0px 2px 4px;
+      h2{
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: solid 1px #333;
+      }
+      .search-results{
+        a{
+          text-decoration: none;
+          .top-articles__box{
+            background-color: #dcdcdc;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            .image-box{
+              height: 80px;
+              width: 80px;
+              min-width: 80px;
+              background-color: #fff;
+              overflow: hidden;
+              box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
+              img{
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                vertical-align: top;
+                width: 100%;
+              }
+            }
+            .top-article-right{
+              margin-left: 20px;
+              color: #333;
+              width: 100%;
+              .article-title{
+                max-height: 36px;
+                font-size: 18px;
+                font-weight: bold;
+                overflow: hidden;
+                margin-bottom: 15px;
+              }
+              .article-writer{
+                font-size: 14px;
+                display: inline-block;
+              }
+              .article-favorites{
+                margin-top: 5px;
+                display: inline-block;
+                margin-left: 10px;
+                font-size: 14px;
+                .fa-star{
+                  color: #ffa500;
+                }
+                span{
+                  margin-left: 5px;
+                }
+              }
+              .article-tags{
+                margin-top: 5px;
+                font-size: 12px;
+                overflow: hidden;
+                li{
+                  display: inline-block;
+                  background-color: #c0c0c0;
+                  border-radius: 25%;
+                  padding: 0 2px;
+                  margin-right: 5px;
+                }
+              }
+              .article-created_at{
+                font-size: 10px;
+                color: #666666;
+                float: right;
+                margin: 3px 20px 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .search-container{
+    .search-main{
+      margin: 0 auto;
+      width: 100%;
+      .search-content{
+        width: calc(100% - 300px);
+        float: left;
+      }
+    }
+  }
+  }
