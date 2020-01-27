@@ -32,16 +32,22 @@
           </div>
 
           <div class='favorite-area'>
-            <% if current_user.already_favorited?(@article) %>
-              <%= button_to article_favorite_path(@article), method: :delete do %>
-                <i class="fa fa-star" aria-hidden="true" class="favorited" ></i>
+            <% if user_signed_in? %>
+              <% if current_user.already_favorited?(@article) %>
+                <%= button_to article_favorite_path(@article), method: :delete do %>
+                  <i class="fa fa-star" aria-hidden="true" class="favorited" ></i>
+                <% end %>
+              <% else %>
+                <%= button_to article_favorites_path(@article) do %>
+                  <i class="fa fa-star-o" aria-hidden="true" ></i>
+                <% end %>
               <% end %>
             <% else %>
-              
-              <%= button_to article_favorites_path(@article) do %>
+              <button>
                 <i class="fa fa-star-o" aria-hidden="true" ></i>
-              <% end %>
+              </button>
             <% end %>
+
             <div class='favorite-count'>
               <span><%= @article.favorites.count %></span>
             </div>
