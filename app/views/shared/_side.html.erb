@@ -13,7 +13,7 @@
   <div class='search-pulldown'>
     <%= form_tag search_articles_path, method: 'get' do %>
       <%= text_field_tag :search,'', class: 'input-field' %>
-      <%= submit_tag '検索', name: nil %>
+      <%= submit_tag '検索', name: nil, class: 'search-btn' %>
     <% end %>
   </div>
 
