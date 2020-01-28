@@ -62,43 +62,47 @@
         </div>
 
         <div class='user-favorites user-articles'>
-          <% @favorites.each do |fv| %>
-            <%= link_to article_path(fv) do %>
-              <div class='top-articles__box'>
-                <div class='image-box'>
-                  <%= image_tag fv.images.first.content %>
-                </div>
-                <div class='top-article-right'>
-                  <div class='article-title'>
-                    <p>
-                      <%= fv.title %>
+          <% if @favorites.length != 0 %>
+            <% @favorites.each do |fv| %>
+              <%= link_to article_path(fv) do %>
+                <div class='top-articles__box'>
+                  <div class='image-box'>
+                    <%= image_tag fv.images.first.content %>
                   </div>
+                  <div class='top-article-right'>
+                    <div class='article-title'>
+                      <p>
+                        <%= fv.title %>
+                    </div>
 
-                  <div class='article-writer'>
-                    by
-                    <%= fv.user.name %>
-                  </div>
+                    <div class='article-writer'>
+                      by
+                      <%= fv.user.name %>
+                    </div>
 
-                  <div class='article-favorites'>
-                    <% if current_user.already_favorited?(fv) %>
-                      <i class="fa fa-star" aria-hidden="true"></i><span><%= fv.favorites.count %></span>
-                    <% else %>
-                      <i class="fa fa-star-o" aria-hidden="true"></i><span><%= fv.favorites.count %></span>
-                    <% end %>
+                    <div class='article-favorites'>
+                      <% if current_user.already_favorited?(fv) %>
+                        <i class="fa fa-star" aria-hidden="true"></i><span><%= fv.favorites.count %></span>
+                      <% else %>
+                        <i class="fa fa-star-o" aria-hidden="true"></i><span><%= fv.favorites.count %></span>
+                      <% end %>
+                    </div>
+                    <div class='article-tags'>
+                      <h3>登録されたタグ：
+                      <% fv.tags.each do |tag| %>
+                        <li><%= tag.name %>
+                      <% end %>
+                    </div>
+                    <div class='article-created_at'>
+                      <%= fv.created_at.strftime("%y-%m-%d %H:%M") %>
+                    </div>
+                    
                   </div>
-                  <div class='article-tags'>
-                    <h3>登録されたタグ：
-                    <% fv.tags.each do |tag| %>
-                      <li><%= tag.name %>
-                    <% end %>
-                  </div>
-                  <div class='article-created_at'>
-                    <%= fv.created_at.strftime("%y-%m-%d %H:%M") %>
-                  </div>
-                  
                 </div>
-              </div>
+              <% end %>
             <% end %>
+          <% else %>
+            お気に入り登録した記事はありません
           <% end %>
           <div class='articles-pagenation'>
             <%= paginate(@favorites) %>
