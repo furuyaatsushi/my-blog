@@ -16,9 +16,9 @@
       <div class='article-show-main'>
 
         <div class='article-user'>
-          <% if @article.user.icon.nil? %>
+          <% if current_user.icon.blank? %>
             <%= link_to user_path(@article.user) do %>
-              <%= image_tag 'men_icon.png' %>
+              <%= image_tag 'smile.png' %>
             <% end %>
           <% else %>
             <%= link_to user_path(@article.user) do %>
