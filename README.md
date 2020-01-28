@@ -13,7 +13,11 @@ mail: guest@gmail.com<br>
 password: 555555
 
 # プレビュー
+トップ画面
+<img width="890" alt="スクリーンショット 2020-01-29 4.42.27.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/433361/3e0c3251-7b12-8655-5004-3404a8e94769.png">
 
+記事詳細画面
+<img width="890" alt="スクリーンショット 2020-01-29 4.42.09.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/433361/7cb6bd7b-e8be-2f96-515b-58cfe8d70f27.png">
 
 # 制作環境
 * Ruby on Rails '5.0.7.2'
