@@ -102,7 +102,9 @@
               <% end %>
             <% end %>
           <% else %>
-            お気に入り登録した記事はありません
+            <div class='favorite-none'>
+              お気に入り登録した記事はありません
+            </div>
           <% end %>
           <div class='articles-pagenation'>
             <%= paginate(@favorites) %>
