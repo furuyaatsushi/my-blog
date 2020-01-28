@@ -6,9 +6,9 @@
   </div>
   <% if user_signed_in? %>
     <div class='to-userpage'>
-      <% if current_user.icon.nil? %>
+      <% if current_user.icon.blank? %>
         <%= link_to user_path(current_user) do %>
-          <img src="<%=asset_path "" %>">
+          <img src="<%=asset_path "smile.png" %>">
         <% end %>
       <% else %>
         <%= link_to user_path(current_user) do %>
